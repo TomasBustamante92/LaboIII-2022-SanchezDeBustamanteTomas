@@ -603,6 +603,7 @@ function alta()
                     personasFiltradas.push(personaAux);
                     crearTabla();
                     cancelar();
+                    document.getElementById("formDatos").style.display = "";
                 }
                 else
                 {
@@ -619,6 +620,7 @@ function alta()
                     crearTabla();
                     limpiarPromedio();
                     cancelar();
+                    document.getElementById("formDatos").style.display = "";
                 }
                 else
                 {
@@ -628,7 +630,7 @@ function alta()
         }
         else
         {
-            alert("No estan todos los campos completos")
+            alert("No estan todos los campos completos o edad no es un numero")
         }
     }
     else
@@ -636,7 +638,6 @@ function alta()
         alert("Esta persona ya esta registrada");
     }
     limpiarPromedio();
-    document.getElementById("formDatos").style.display = "";
 }
 
 let btnModificar = document.getElementById("btnModificar");
@@ -702,6 +703,7 @@ function modificar()
             crearTabla();
             limpiarPromedio();
             cancelar();
+            document.getElementById("formDatos").style.display = "";
         }
         else
         {
@@ -712,7 +714,6 @@ function modificar()
     {
         alert("Persona no encontrada");
     }
-    document.getElementById("formDatos").style.display = "";
 }
 
 btnCancelar = document.getElementById("btnCancelar");
@@ -738,10 +739,10 @@ function eliminar()
         crearTabla();
         limpiarPromedio();
         cancelar();
+        document.getElementById("formDatos").style.display = "";
     }
     else
     {
         alert("No se pudo eliminar");
     }
-    document.getElementById("formDatos").style.display = "";
 }
